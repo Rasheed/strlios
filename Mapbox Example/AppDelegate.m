@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-#import "OnlineLayerViewController.h"
+#import "STHomeLayerViewController.h"
 #import "OfflineLayerViewController.h"
 #import "InteractiveLayerViewController.h"
 
@@ -21,19 +21,19 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    [[RMConfiguration configuration] setAccessToken:@"pk.eyJ1IjoianVzdGluIiwiYSI6IlpDbUJLSUEifQ.4mG8vhelFMju6HpIY-Hi5A"];
+    [[RMConfiguration configuration] setAccessToken:@"pk.eyJ1IjoicmFzaGVlZHdpaGFpYiIsImEiOiJaOTBoMFI4In0.5rmY9BbciXR2L_8JC_CaVA"];
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     NSMutableArray *viewControllers = [NSMutableArray array];
     
-    for (NSString *typeString in [NSArray arrayWithObjects:@"online", @"offline", @"interactive", nil])
+    for (NSString *typeString in [NSArray arrayWithObjects:@"Home", nil])
     {
-        Class ViewControllerClass = NSClassFromString([NSString stringWithFormat:@"%@LayerViewController", [typeString capitalizedString]]);
+        Class ViewControllerClass = NSClassFromString([NSString stringWithFormat:@"STHomeLayerViewController"]);
         
         UIViewController *viewController = [[ViewControllerClass alloc] initWithNibName:nil bundle:nil];
         
-        viewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:[NSString stringWithFormat:@"%@ Layer", [typeString capitalizedString]]
+        viewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:[NSString stringWithFormat:@"Home"]
                                                                   image:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", typeString]] 
                                                                     tag:0];
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */; };
 		DD3A27EE1582A0AB00DADEFF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */; };
 		DD76D72E152E47660065DBB2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC4BF10152E455500089409 /* libz.dylib */; };
 		DDA6DFBF16A6364F00D373D8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6DFBD16A6364F00D373D8 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -30,11 +31,12 @@
 		DDEF3A381522813600DE6DB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDEF3A361522813600DE6DB0 /* InfoPlist.strings */; };
 		DDEF3A3A1522813600DE6DB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEF3A391522813600DE6DB0 /* main.m */; };
 		DDEF3A3E1522813600DE6DB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEF3A3D1522813600DE6DB0 /* AppDelegate.m */; };
-		DDEF3A411522813600DE6DB0 /* OnlineLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEF3A401522813600DE6DB0 /* OnlineLayerViewController.m */; };
 		DDEF3A6D1522847A00DE6DB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF3A6C1522847A00DE6DB0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHomeLayerViewController.m; sourceTree = "<group>"; };
+		1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeLayerViewController.h; sourceTree = "<group>"; };
 		DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DDA6DFBD16A6364F00D373D8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		DDA6DFBE16A6364F00D373D8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -120,8 +122,6 @@
 		DDEF3A3B1522813600DE6DB0 /* Mapbox Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mapbox Example-Prefix.pch"; sourceTree = "<group>"; };
 		DDEF3A3C1522813600DE6DB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDEF3A3D1522813600DE6DB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DDEF3A3F1522813600DE6DB0 /* OnlineLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnlineLayerViewController.h; sourceTree = "<group>"; };
-		DDEF3A401522813600DE6DB0 /* OnlineLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnlineLayerViewController.m; sourceTree = "<group>"; };
 		DDEF3A6C1522847A00DE6DB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DDEF3A6E1522848500DE6DB0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -282,10 +282,10 @@
 		DDEF3A331522813600DE6DB0 /* Mapbox Example */ = {
 			isa = PBXGroup;
 			children = (
+				1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */,
+				1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */,
 				DDEF3A3C1522813600DE6DB0 /* AppDelegate.h */,
 				DDEF3A3D1522813600DE6DB0 /* AppDelegate.m */,
-				DDEF3A3F1522813600DE6DB0 /* OnlineLayerViewController.h */,
-				DDEF3A401522813600DE6DB0 /* OnlineLayerViewController.m */,
 				DDC4BEC4152E366800089409 /* OfflineLayerViewController.h */,
 				DDC4BEC5152E366800089409 /* OfflineLayerViewController.m */,
 				DDC4BEF0152E3EEE00089409 /* InteractiveLayerViewController.h */,
@@ -399,9 +399,9 @@
 			files = (
 				DDEF3A3A1522813600DE6DB0 /* main.m in Sources */,
 				DDEF3A3E1522813600DE6DB0 /* AppDelegate.m in Sources */,
-				DDEF3A411522813600DE6DB0 /* OnlineLayerViewController.m in Sources */,
 				DDC4BEC6152E366800089409 /* OfflineLayerViewController.m in Sources */,
 				DDC4BEF1152E3EEE00089409 /* InteractiveLayerViewController.m in Sources */,
+				1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */,
 				DDA6DFBF16A6364F00D373D8 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
