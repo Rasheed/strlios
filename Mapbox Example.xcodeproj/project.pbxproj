@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */; };
+		1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */; };
 		DD3A27EE1582A0AB00DADEFF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */; };
 		DD76D72E152E47660065DBB2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC4BF10152E455500089409 /* libz.dylib */; };
 		DDA6DFBF16A6364F00D373D8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6DFBD16A6364F00D373D8 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHomeLayerViewController.m; sourceTree = "<group>"; };
 		1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeLayerViewController.h; sourceTree = "<group>"; };
+		1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STHomeLayerViewController.xib; sourceTree = "<group>"; };
 		DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DDA6DFBD16A6364F00D373D8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		DDA6DFBE16A6364F00D373D8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 		DDEF3A331522813600DE6DB0 /* Mapbox Example */ = {
 			isa = PBXGroup;
 			children = (
+				1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */,
 				1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */,
 				1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */,
 				DDEF3A3C1522813600DE6DB0 /* AppDelegate.h */,
@@ -370,6 +373,7 @@
 				DDC4BECC152E380900089409 /* control-room-0.2.0.mbtiles in Resources */,
 				DDC4BECF152E38D200089409 /* interactive.png in Resources */,
 				DDC930071A1599D20082BDE8 /* LaunchScreen.xib in Resources */,
+				1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */,
 				DDC4BED0152E38D200089409 /* interactive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +468,7 @@
 				GCC_PREFIX_HEADER = "Mapbox Example/Mapbox Example-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Mapbox.framework/Headers\"";
 				INFOPLIST_FILE = "Mapbox Example/Mapbox Example-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -559,7 +563,7 @@
 				GCC_PREFIX_HEADER = "Mapbox Example/Mapbox Example-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Mapbox.framework/Headers\"";
 				INFOPLIST_FILE = "Mapbox Example/Mapbox Example-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -589,7 +593,7 @@
 				GCC_PREFIX_HEADER = "Mapbox Example/Mapbox Example-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Mapbox.framework/Headers\"";
 				INFOPLIST_FILE = "Mapbox Example/Mapbox Example-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

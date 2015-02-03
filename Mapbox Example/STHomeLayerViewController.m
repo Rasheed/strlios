@@ -11,7 +11,10 @@
 
 @property (nonatomic, retain) CLLocationManager * locationManager;
 @property (nonatomic, retain) NSMutableArray *points;
-
+@property (nonatomic, retain) RMMapView *mapView;
+@property (nonatomic, retain) NSMutableDictionary *routes;
+@property (nonatomic, strong) IBOutlet UIView *mapViewContainer;
+@property (weak, nonatomic) IBOutlet UIView *buttonContainer;
 
 @end
 
@@ -23,19 +26,23 @@
 {
     [super viewDidLoad];
 
+    self.routes = [[NSMutableDictionary alloc] init];
+    
     RMMapboxSource *onlineSource = [[RMMapboxSource alloc] initWithMapID:kMapboxMapID];
 
-    RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:onlineSource];
+    self.mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:onlineSource];
     
-    mapView.zoom = 2;
-    
-    mapView.delegate = self;
-    
-    mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
-    mapView.userTrackingMode = RMUserTrackingModeFollow;
+    self.mapView.centerCoordinate = CLLocationCoordinate2DMake(51.5248, -0.1336);
 
-    [self.view addSubview:mapView];
+    self.mapView.zoom = 2;
+    
+    self.mapView.delegate = self;
+    
+    self.mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
+    self.mapView.userTrackingMode = RMUserTrackingModeFollow;
+
+    [self.mapViewContainer addSubview:self.mapView];
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -44,8 +51,9 @@
     
     [self.locationManager startUpdatingLocation];
     [self.locationManager requestWhenInUseAuthorization];
+    
+    [self.buttonContainer setHidden:YES];
 }
-
 
 - (void)singleTapOnMap:(RMMapView *)mapView at:(CGPoint)point
 {
@@ -97,11 +105,15 @@
                                                                     andTitle:key
                                         ];
             
+            [self.routes setValue:self.points forKey:key];
+
+            
             [mapView addAnnotation:annotation];
             
             [annotation setBoundingBoxFromLocations:self.points];
-
+            
         }
+        [self.buttonContainer setHidden:NO];
     }
 
 }
@@ -145,6 +157,33 @@
         [shape addLineToCoordinate:point.coordinate];
     
     return shape;
+}
+- (IBAction)clickFastest:(id)sender {
+    [self toggleLayerNamed:@"fastestroutepoints"];
+}
+- (IBAction)clickWalkable:(id)sender {
+    [self toggleLayerNamed:@"walkableroutepoints"];
+}
+- (IBAction)clickStrl:(id)sender {
+    [self toggleLayerNamed:@"strlroutepoints"];
+}
+
+- (void) toggleLayerNamed:(NSString *) name {
+    bool removed = NO;
+    for(RMAnnotation *annotation in [self.mapView annotations]) {
+        if([[annotation title] isEqualToString:name]) {
+            [self.mapView removeAnnotation:annotation];
+            removed = YES;
+        }
+    }
+    if(!removed) {
+        RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView
+                                                              coordinate:self.mapView.centerCoordinate
+                                                                andTitle:name ];
+        self.points = [self.routes objectForKey:name];
+        [self.mapView addAnnotation:annotation];
+        
+    }
 }
 
 @end
