@@ -8,8 +8,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STHomeLayerViewController">
             <connections>
                 <outlet property="buttonContainer" destination="D2a-Df-KF1" id="Zdz-sV-8Bq"/>
+                <outlet property="fastestLabel" destination="gqD-cP-sdT" id="4oe-i2-Whb"/>
+                <outlet property="labelContainer" destination="IDU-Un-NbT" id="6AZ-Zx-1v0"/>
                 <outlet property="mapViewContainer" destination="hBC-K6-Ylv" id="L8m-Cv-bTF"/>
+                <outlet property="strlLabel" destination="Uhj-OV-xbx" id="vbY-ks-cmy"/>
                 <outlet property="view" destination="iN0-l3-epB" id="HYE-as-DZt"/>
+                <outlet property="walkableLabel" destination="dCj-7b-hRh" id="nzv-ZA-Nyn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -101,6 +105,30 @@
                         <constraint firstItem="JTd-9h-xl9" firstAttribute="top" secondItem="D2a-Df-KF1" secondAttribute="top" constant="7" id="i2h-Fc-8Oz"/>
                         <constraint firstAttribute="bottom" secondItem="91z-de-kpF" secondAttribute="bottom" constant="7" id="wNL-hO-XSB"/>
                     </constraints>
+                </view>
+                <view alpha="0.60000001192092878" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDU-Un-NbT">
+                    <rect key="frame" x="0.0" y="103" width="320" height="19"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Walkable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCj-7b-hRh">
+                            <rect key="frame" x="120" y="-2" width="81" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Strl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhj-OV-xbx">
+                            <rect key="frame" x="231" y="-2" width="81" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fastest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqD-cP-sdT">
+                            <rect key="frame" x="8" y="-2" width="81" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.11372549830000001" green="0.66274511810000003" blue="0.63529413940000001" alpha="1" colorSpace="deviceRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

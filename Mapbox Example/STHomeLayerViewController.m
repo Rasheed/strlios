@@ -15,6 +15,10 @@
 @property (nonatomic, retain) NSMutableDictionary *routes;
 @property (nonatomic, strong) IBOutlet UIView *mapViewContainer;
 @property (weak, nonatomic) IBOutlet UIView *buttonContainer;
+@property (weak, nonatomic) IBOutlet UIView *labelContainer;
+@property (weak, nonatomic) IBOutlet UILabel *fastestLabel;
+@property (weak, nonatomic) IBOutlet UILabel *walkableLabel;
+@property (weak, nonatomic) IBOutlet UILabel *strlLabel;
 
 @end
 
@@ -53,6 +57,8 @@
     [self.locationManager requestWhenInUseAuthorization];
     
     [self.buttonContainer setHidden:YES];
+    [self.labelContainer setHidden:YES];
+
 }
 
 - (void)singleTapOnMap:(RMMapView *)mapView at:(CGPoint)point
@@ -91,6 +97,18 @@
         NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error: &e];
         for(id key in JSON) {
+            if ([key rangeOfString:@"Distance"].location != NSNotFound) {
+                NSString *value =[NSString stringWithFormat:@"%@",[JSON objectForKey: key]];
+                NSString *labelcontent = [NSString stringWithFormat:@"%dm", value.integerValue];
+                if([key isEqualToString:@"fastestRouteDistance"]) {
+                    [self.fastestLabel setText:labelcontent];
+                } else if([key isEqualToString:@"walkableRouteDistance"]) {
+                    [self.walkableLabel setText:labelcontent];
+                } else if([key isEqualToString:@"strlRouteDistance"]) {
+                    [self.strlLabel setText:labelcontent];
+                }
+                continue;
+            }
             
             NSArray *value = [JSON objectForKey:key];
             self.points = [value mutableCopy];
@@ -114,6 +132,8 @@
             
         }
         [self.buttonContainer setHidden:NO];
+        [self.labelContainer setHidden:NO];
+
     }
 
 }
