@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *fastestLabel;
 @property (weak, nonatomic) IBOutlet UILabel *walkableLabel;
 @property (weak, nonatomic) IBOutlet UILabel *strlLabel;
+@property (weak, nonatomic) IBOutlet UIView *controlContainer;
 
 @end
 
@@ -56,14 +57,22 @@
     [self.locationManager startUpdatingLocation];
     [self.locationManager requestWhenInUseAuthorization];
     
-    [self.buttonContainer setHidden:YES];
-    [self.labelContainer setHidden:YES];
+    //[self.buttonContainer setHidden:YES];
+    //[self.labelContainer setHidden:YES];
 
 }
 
 - (void)singleTapOnMap:(RMMapView *)mapView at:(CGPoint)point
 {
     [mapView removeAllAnnotations];
+    
+    [UIView beginAnimations:@"buttonContainer" context:nil];
+    [UIView setAnimationDuration:0.3];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    //new position
+    [[self controlContainer]setTransform:CGAffineTransformMakeTranslation(0, 60)];
+    
+    [UIView commitAnimations];
     
     CLLocationCoordinate2D tappedPoint = CLLocationCoordinate2DMake([mapView pixelToCoordinate:point].latitude, [mapView pixelToCoordinate:point].longitude);
     NSLog(@"You tapped at %f, %f", tappedPoint.latitude, tappedPoint.longitude);
