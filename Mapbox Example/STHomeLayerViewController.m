@@ -13,6 +13,7 @@
 @property (nonatomic, retain) NSMutableArray *points;
 @property (nonatomic, retain) RMMapView *mapView;
 @property (nonatomic, retain) NSMutableDictionary *routes;
+@property (nonatomic) bool *controlVisible;
 @property (nonatomic, strong) IBOutlet UIView *mapViewContainer;
 @property (weak, nonatomic) IBOutlet UIView *buttonContainer;
 @property (weak, nonatomic) IBOutlet UIView *labelContainer;
@@ -36,17 +37,11 @@
     RMMapboxSource *onlineSource = [[RMMapboxSource alloc] initWithMapID:kMapboxMapID];
 
     self.mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:onlineSource];
-    
     self.mapView.centerCoordinate = CLLocationCoordinate2DMake(51.5248, -0.1336);
-
     self.mapView.zoom = 2;
-    
     self.mapView.delegate = self;
-    
     self.mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
     self.mapView.userTrackingMode = RMUserTrackingModeFollow;
-
     [self.mapViewContainer addSubview:self.mapView];
     
     self.locationManager = [[CLLocationManager alloc] init];
@@ -56,23 +51,13 @@
     
     [self.locationManager startUpdatingLocation];
     [self.locationManager requestWhenInUseAuthorization];
-    
-    //[self.buttonContainer setHidden:YES];
-    //[self.labelContainer setHidden:YES];
 
+    [self.controlContainer setHidden:YES];
 }
 
 - (void)singleTapOnMap:(RMMapView *)mapView at:(CGPoint)point
 {
     [mapView removeAllAnnotations];
-    
-    [UIView beginAnimations:@"buttonContainer" context:nil];
-    [UIView setAnimationDuration:0.3];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-    //new position
-    [[self controlContainer]setTransform:CGAffineTransformMakeTranslation(0, 60)];
-    
-    [UIView commitAnimations];
     
     CLLocationCoordinate2D tappedPoint = CLLocationCoordinate2DMake([mapView pixelToCoordinate:point].latitude, [mapView pixelToCoordinate:point].longitude);
     NSLog(@"You tapped at %f, %f", tappedPoint.latitude, tappedPoint.longitude);
@@ -108,7 +93,7 @@
         for(id key in JSON) {
             if ([key rangeOfString:@"Distance"].location != NSNotFound) {
                 NSString *value =[NSString stringWithFormat:@"%@",[JSON objectForKey: key]];
-                NSString *labelcontent = [NSString stringWithFormat:@"%dm", value.integerValue];
+                NSString *labelcontent = [NSString stringWithFormat:@"%ldm", (long)value.integerValue];
                 if([key isEqualToString:@"fastestRouteDistance"]) {
                     [self.fastestLabel setText:labelcontent];
                 } else if([key isEqualToString:@"walkableRouteDistance"]) {
@@ -140,8 +125,7 @@
             [annotation setBoundingBoxFromLocations:self.points];
             
         }
-        [self.buttonContainer setHidden:NO];
-        [self.labelContainer setHidden:NO];
+        [self.controlContainer setHidden:NO];
 
     }
 
@@ -212,6 +196,31 @@
         self.points = [self.routes objectForKey:name];
         [self.mapView addAnnotation:annotation];
         
+    }
+}
+- (IBAction)controlClick:(id)sender {
+    
+    if(self.controlVisible) {
+        [UIView beginAnimations:@"buttonContainer" context:nil];
+        [UIView setAnimationDuration:0.3];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        //new position
+        [[self controlContainer]setTransform:CGAffineTransformMakeTranslation(0, 0)];
+        
+        [UIView commitAnimations];
+
+        self.controlVisible = NO;
+        
+    } else {
+        [UIView beginAnimations:@"buttonContainer" context:nil];
+        [UIView setAnimationDuration:0.3];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        //new position
+        [[self controlContainer]setTransform:CGAffineTransformMakeTranslation(0, 60)];
+    
+        [UIView commitAnimations];
+    
+        self.controlVisible = YES;
     }
 }
 
