@@ -14,6 +14,7 @@
 @property (nonatomic, retain) RMMapView *mapView;
 @property (nonatomic, retain) NSMutableDictionary *routes;
 @property (nonatomic) bool *controlVisible;
+
 @property (nonatomic, strong) IBOutlet UIView *mapViewContainer;
 @property (weak, nonatomic) IBOutlet UIView *buttonContainer;
 @property (weak, nonatomic) IBOutlet UIView *labelContainer;
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *walkableLabel;
 @property (weak, nonatomic) IBOutlet UILabel *strlLabel;
 @property (weak, nonatomic) IBOutlet UIView *controlContainer;
+@property (weak, nonatomic) IBOutlet UIButton *startWalkButton;
 
 @end
 
@@ -53,6 +55,7 @@
     [self.locationManager requestWhenInUseAuthorization];
 
     [self.controlContainer setHidden:YES];
+    [self.startWalkButton setHidden:YES];
 }
 
 - (void)singleTapOnMap:(RMMapView *)mapView at:(CGPoint)point
@@ -126,6 +129,7 @@
             
         }
         [self.controlContainer setHidden:NO];
+        [self.startWalkButton setHidden:NO];
 
     }
 
@@ -195,11 +199,10 @@
                                                                 andTitle:name ];
         self.points = [self.routes objectForKey:name];
         [self.mapView addAnnotation:annotation];
-        
     }
 }
+
 - (IBAction)controlClick:(id)sender {
-    
     if(self.controlVisible) {
         [UIView beginAnimations:@"buttonContainer" context:nil];
         [UIView setAnimationDuration:0.3];
@@ -209,7 +212,7 @@
         
         [UIView commitAnimations];
 
-        self.controlVisible = NO;
+        self.controlVisible = false;
         
     } else {
         [UIView beginAnimations:@"buttonContainer" context:nil];
@@ -220,8 +223,17 @@
     
         [UIView commitAnimations];
     
-        self.controlVisible = YES;
+        self.controlVisible = true;
     }
+}
+
+- (IBAction)startWalk:(id)sender {
+    UIViewController *controller=[[UIViewController alloc] initWithNibName:@"STRouteChooserViewController" bundle:nil];
+    UIView* view=(UIView*)controller.view;
+    view.frame = CGRectMake(0, 0, 300, 167);
+    [view setClipsToBounds:YES];
+    KLCPopup* popup = [KLCPopup popupWithContentView:view];
+    [popup show];
 }
 
 @end

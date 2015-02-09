@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0000101A89229E007B7F77 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00000F1A89229E007B7F77 /* KLCPopup.m */; };
+		1E0000161A89297F007B7F77 /* STRouteChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0000141A89297F007B7F77 /* STRouteChooserViewController.m */; };
+		1E0000171A89297F007B7F77 /* STRouteChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E0000151A89297F007B7F77 /* STRouteChooserViewController.xib */; };
 		1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */; };
 		1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */; };
 		DD3A27EE1582A0AB00DADEFF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */; };
@@ -36,6 +39,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E00000E1A89229E007B7F77 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
+		1E00000F1A89229E007B7F77 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
+		1E0000131A89297F007B7F77 /* STRouteChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRouteChooserViewController.h; sourceTree = "<group>"; };
+		1E0000141A89297F007B7F77 /* STRouteChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRouteChooserViewController.m; sourceTree = "<group>"; };
+		1E0000151A89297F007B7F77 /* STRouteChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRouteChooserViewController.xib; sourceTree = "<group>"; };
 		1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHomeLayerViewController.m; sourceTree = "<group>"; };
 		1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeLayerViewController.h; sourceTree = "<group>"; };
 		1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STHomeLayerViewController.xib; sourceTree = "<group>"; };
@@ -147,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E00000D1A89227B007B7F77 /* ThirdPartyViews */ = {
+			isa = PBXGroup;
+			children = (
+				1E00000E1A89229E007B7F77 /* KLCPopup.h */,
+				1E00000F1A89229E007B7F77 /* KLCPopup.m */,
+			);
+			name = ThirdPartyViews;
+			sourceTree = "<group>";
+		};
 		DDA6DFC016A636BC00D373D8 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +301,10 @@
 		DDEF3A331522813600DE6DB0 /* Mapbox Example */ = {
 			isa = PBXGroup;
 			children = (
+				1E0000131A89297F007B7F77 /* STRouteChooserViewController.h */,
+				1E0000141A89297F007B7F77 /* STRouteChooserViewController.m */,
+				1E0000151A89297F007B7F77 /* STRouteChooserViewController.xib */,
+				1E00000D1A89227B007B7F77 /* ThirdPartyViews */,
 				1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */,
 				1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */,
 				1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */,
@@ -363,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E0000171A89297F007B7F77 /* STRouteChooserViewController.xib in Resources */,
 				DDA8783919AE9899006AFD7A /* Mapbox.bundle in Resources */,
 				DDC930061A1599D20082BDE8 /* Images.xcassets in Resources */,
 				DDEF3A381522813600DE6DB0 /* InfoPlist.strings in Resources */,
@@ -402,10 +424,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDEF3A3A1522813600DE6DB0 /* main.m in Sources */,
+				1E0000161A89297F007B7F77 /* STRouteChooserViewController.m in Sources */,
 				DDEF3A3E1522813600DE6DB0 /* AppDelegate.m in Sources */,
 				DDC4BEC6152E366800089409 /* OfflineLayerViewController.m in Sources */,
 				DDC4BEF1152E3EEE00089409 /* InteractiveLayerViewController.m in Sources */,
 				1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */,
+				1E0000101A89229E007B7F77 /* KLCPopup.m in Sources */,
 				DDA6DFBF16A6364F00D373D8 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

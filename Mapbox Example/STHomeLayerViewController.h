@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Mapbox.h"
+#import "KLCPopup.h"
 
 
 @interface STHomeLayerViewController : UIViewController<CLLocationManagerDelegate, RMMapViewDelegate>
