@@ -9,6 +9,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Mapbox.h"
 #import "KLCPopup.h"
+#import "STRouteChooserViewController.h"
 
 
 @interface STHomeLayerViewController : UIViewController<CLLocationManagerDelegate, RMMapViewDelegate>

@@ -228,7 +228,7 @@
 }
 
 - (IBAction)startWalk:(id)sender {
-    UIViewController *controller=[[UIViewController alloc] initWithNibName:@"STRouteChooserViewController" bundle:nil];
+    STRouteChooserViewController *controller=[[STRouteChooserViewController alloc] initWithNibName:@"STRouteChooserViewController" bundle:nil];
     UIView* view=(UIView*)controller.view;
     view.frame = CGRectMake(0, 0, 300, 167);
     [view setClipsToBounds:YES];
