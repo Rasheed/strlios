@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *strlLabel;
 @property (weak, nonatomic) IBOutlet UIView *controlContainer;
 @property (weak, nonatomic) IBOutlet UIButton *startWalkButton;
+@property (strong, nonatomic) IBOutlet UIView *ratingView;
 
 @end
 
@@ -59,6 +60,7 @@
 
     [self.controlContainer setHidden:YES];
     [self.startWalkButton setHidden:YES];
+    [self.ratingView setHidden:YES];
 }
 
 - (void)singleTapOnMap:(RMMapView *)mapView at:(CGPoint)point
@@ -241,7 +243,6 @@
 
 -(void)routeSelected:(STRouteChooserViewController *)sender withName:(NSString *)name {
     
-    NSLog(@"%@", name);
     [self.controlContainer setHidden:YES];
     [self.startWalkButton setHidden:YES];
     [self startSelectedRoute:name];
@@ -256,8 +257,10 @@
                                                                                andTitle:@"Destination"];
     
     [self.mapView addAnnotation:pointForDestination];
-
     [self toggleLayerNamed:pathName];
+    [self.ratingView setHidden:NO];
+
+    
 }
 
 @end
