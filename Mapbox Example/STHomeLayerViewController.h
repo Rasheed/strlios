@@ -11,7 +11,6 @@
 #import "KLCPopup.h"
 #import "STRouteChooserViewController.h"
 
-
 @interface STHomeLayerViewController : UIViewController<CLLocationManagerDelegate, RMMapViewDelegate>
 
 @end

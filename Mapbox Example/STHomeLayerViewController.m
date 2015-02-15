@@ -6,6 +6,7 @@
 //
 
 #import "STHomeLayerViewController.h"
+#import "UIViewController+MJPopupViewController.h"
 
 @interface STHomeLayerViewController()
 
@@ -64,11 +65,9 @@
     
     CLLocationCoordinate2D tappedPoint = CLLocationCoordinate2DMake([mapView pixelToCoordinate:point].latitude, [mapView pixelToCoordinate:point].longitude);
     NSLog(@"You tapped at %f, %f", tappedPoint.latitude, tappedPoint.longitude);
-    CLLocation *location = [self.locationManager location];
+    //CLLocation *location = [self.locationManager location];
     
-    if(location == nil) {
-        location = [[CLLocation alloc] initWithLatitude:51.508898 longitude:-0.133996];
-    }
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:51.5248 longitude:-0.1336];
     NSLog(@"Your current location is %f, %f", location.coordinate.latitude, location.coordinate.longitude);
 
     
@@ -81,6 +80,8 @@
     [self zoomMapView:mapView toFit:location.coordinate andPoint:tappedPoint];
 
     NSString *urlString = [NSString stringWithFormat:@"https://prelimstrlapp.herokuapp.com/services/path/all/%f/%f/%f/%f", location.coordinate.latitude, location.coordinate.longitude, tappedPoint.latitude, tappedPoint.longitude];
+    
+    NSLog(@"urlstring %@", urlString);
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     
@@ -229,11 +230,8 @@
 
 - (IBAction)startWalk:(id)sender {
     STRouteChooserViewController *controller=[[STRouteChooserViewController alloc] initWithNibName:@"STRouteChooserViewController" bundle:nil];
-    UIView* view=(UIView*)controller.view;
-    view.frame = CGRectMake(0, 0, 300, 167);
-    [view setClipsToBounds:YES];
-    KLCPopup* popup = [KLCPopup popupWithContentView:view];
-    [popup show];
+    [self presentPopupViewController:controller animationType:MJPopupViewAnimationFade];
+
 }
 
 @end

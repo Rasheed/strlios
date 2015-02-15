@@ -12,6 +12,8 @@
 		1E0000171A89297F007B7F77 /* STRouteChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E0000151A89297F007B7F77 /* STRouteChooserViewController.xib */; };
 		1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */; };
 		1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */; };
+		1E77D5EE1A90F96F00C90917 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */; };
+		1E77D5EF1A90F96F00C90917 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5ED1A90F96F00C90917 /* UIViewController+MJPopupViewController.m */; };
 		DD3A27EE1582A0AB00DADEFF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */; };
 		DD76D72E152E47660065DBB2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC4BF10152E455500089409 /* libz.dylib */; };
 		DDA6DFBF16A6364F00D373D8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6DFBD16A6364F00D373D8 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -47,6 +49,10 @@
 		1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHomeLayerViewController.m; sourceTree = "<group>"; };
 		1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeLayerViewController.h; sourceTree = "<group>"; };
 		1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STHomeLayerViewController.xib; sourceTree = "<group>"; };
+		1E77D5EA1A90F96F00C90917 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
+		1E77D5EC1A90F96F00C90917 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		1E77D5ED1A90F96F00C90917 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DDA6DFBD16A6364F00D373D8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		DDA6DFBE16A6364F00D373D8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -122,14 +128,14 @@
 		DDC4BF10152E455500089409 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		DDC930041A1599D20082BDE8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DDC930051A1599D20082BDE8 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		DDEF3A291522813600DE6DB0 /* MB Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MB Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDEF3A291522813600DE6DB0 /* StrlLondon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrlLondon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEF3A2D1522813600DE6DB0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DDEF3A2F1522813600DE6DB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDEF3A311522813600DE6DB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DDEF3A351522813600DE6DB0 /* Mapbox Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mapbox Example-Info.plist"; sourceTree = "<group>"; };
+		DDEF3A351522813600DE6DB0 /* StrlApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StrlApp-Info.plist"; sourceTree = "<group>"; };
 		DDEF3A371522813600DE6DB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDEF3A391522813600DE6DB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DDEF3A3B1522813600DE6DB0 /* Mapbox Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mapbox Example-Prefix.pch"; sourceTree = "<group>"; };
+		DDEF3A3B1522813600DE6DB0 /* StrlApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StrlApp-Prefix.pch"; sourceTree = "<group>"; };
 		DDEF3A3C1522813600DE6DB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDEF3A3D1522813600DE6DB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DDEF3A6C1522847A00DE6DB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -158,10 +164,34 @@
 		1E00000D1A89227B007B7F77 /* ThirdPartyViews */ = {
 			isa = PBXGroup;
 			children = (
+				1E77D5EA1A90F96F00C90917 /* MJPopupBackgroundView.h */,
+				1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */,
+				1E77D5EC1A90F96F00C90917 /* UIViewController+MJPopupViewController.h */,
+				1E77D5ED1A90F96F00C90917 /* UIViewController+MJPopupViewController.m */,
 				1E00000E1A89229E007B7F77 /* KLCPopup.h */,
 				1E00000F1A89229E007B7F77 /* KLCPopup.m */,
 			);
 			name = ThirdPartyViews;
+			sourceTree = "<group>";
+		};
+		1E77D5AB1A90063A00C90917 /* RouteChooser */ = {
+			isa = PBXGroup;
+			children = (
+				1E0000131A89297F007B7F77 /* STRouteChooserViewController.h */,
+				1E0000141A89297F007B7F77 /* STRouteChooserViewController.m */,
+				1E0000151A89297F007B7F77 /* STRouteChooserViewController.xib */,
+			);
+			name = RouteChooser;
+			sourceTree = "<group>";
+		};
+		1E77D5AC1A90065E00C90917 /* HomeLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */,
+				1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */,
+				1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */,
+			);
+			name = HomeLayer;
 			sourceTree = "<group>";
 		};
 		DDA6DFC016A636BC00D373D8 /* Categories */ = {
@@ -279,7 +309,7 @@
 		DDEF3A2A1522813600DE6DB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDEF3A291522813600DE6DB0 /* MB Example.app */,
+				DDEF3A291522813600DE6DB0 /* StrlLondon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,13 +331,9 @@
 		DDEF3A331522813600DE6DB0 /* Mapbox Example */ = {
 			isa = PBXGroup;
 			children = (
-				1E0000131A89297F007B7F77 /* STRouteChooserViewController.h */,
-				1E0000141A89297F007B7F77 /* STRouteChooserViewController.m */,
-				1E0000151A89297F007B7F77 /* STRouteChooserViewController.xib */,
+				1E77D5AC1A90065E00C90917 /* HomeLayer */,
+				1E77D5AB1A90063A00C90917 /* RouteChooser */,
 				1E00000D1A89227B007B7F77 /* ThirdPartyViews */,
-				1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */,
-				1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */,
-				1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */,
 				DDEF3A3C1522813600DE6DB0 /* AppDelegate.h */,
 				DDEF3A3D1522813600DE6DB0 /* AppDelegate.m */,
 				DDC4BEC4152E366800089409 /* OfflineLayerViewController.h */,
@@ -324,10 +350,10 @@
 		DDEF3A341522813600DE6DB0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DDEF3A351522813600DE6DB0 /* Mapbox Example-Info.plist */,
+				DDEF3A351522813600DE6DB0 /* StrlApp-Info.plist */,
 				DDEF3A361522813600DE6DB0 /* InfoPlist.strings */,
 				DDEF3A391522813600DE6DB0 /* main.m */,
-				DDEF3A3B1522813600DE6DB0 /* Mapbox Example-Prefix.pch */,
+				DDEF3A3B1522813600DE6DB0 /* StrlApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -335,9 +361,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DDEF3A281522813600DE6DB0 /* Mapbox Example */ = {
+		DDEF3A281522813600DE6DB0 /* StrlApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDEF3A471522813600DE6DB0 /* Build configuration list for PBXNativeTarget "Mapbox Example" */;
+			buildConfigurationList = DDEF3A471522813600DE6DB0 /* Build configuration list for PBXNativeTarget "StrlApp" */;
 			buildPhases = (
 				DDEF3A251522813600DE6DB0 /* Sources */,
 				DDEF3A261522813600DE6DB0 /* Frameworks */,
@@ -348,9 +374,9 @@
 			);
 			dependencies = (
 			);
-			name = "Mapbox Example";
+			name = StrlApp;
 			productName = "Mapbox Example";
-			productReference = DDEF3A291522813600DE6DB0 /* MB Example.app */;
+			productReference = DDEF3A291522813600DE6DB0 /* StrlLondon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -362,7 +388,7 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Mapbox / Development Seed";
 			};
-			buildConfigurationList = DDEF3A231522813600DE6DB0 /* Build configuration list for PBXProject "Mapbox Example" */;
+			buildConfigurationList = DDEF3A231522813600DE6DB0 /* Build configuration list for PBXProject "StrlApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -374,7 +400,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DDEF3A281522813600DE6DB0 /* Mapbox Example */,
+				DDEF3A281522813600DE6DB0 /* StrlApp */,
 			);
 		};
 /* End PBXProject section */
@@ -424,10 +450,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDEF3A3A1522813600DE6DB0 /* main.m in Sources */,
+				1E77D5EF1A90F96F00C90917 /* UIViewController+MJPopupViewController.m in Sources */,
 				1E0000161A89297F007B7F77 /* STRouteChooserViewController.m in Sources */,
 				DDEF3A3E1522813600DE6DB0 /* AppDelegate.m in Sources */,
 				DDC4BEC6152E366800089409 /* OfflineLayerViewController.m in Sources */,
 				DDC4BEF1152E3EEE00089409 /* InteractiveLayerViewController.m in Sources */,
+				1E77D5EE1A90F96F00C90917 /* MJPopupBackgroundView.m in Sources */,
 				1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */,
 				1E0000101A89229E007B7F77 /* KLCPopup.m in Sources */,
 				DDA6DFBF16A6364F00D373D8 /* NSData+Base64.m in Sources */,
@@ -489,9 +517,9 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mapbox Example/Mapbox Example-Prefix.pch";
+				GCC_PREFIX_HEADER = "Mapbox Example/StrlApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Mapbox.framework/Headers\"";
-				INFOPLIST_FILE = "Mapbox Example/Mapbox Example-Info.plist";
+				INFOPLIST_FILE = "Mapbox Example/StrlApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -502,7 +530,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "MB Example";
+				PRODUCT_NAME = StrlLondon;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -584,9 +612,9 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mapbox Example/Mapbox Example-Prefix.pch";
+				GCC_PREFIX_HEADER = "Mapbox Example/StrlApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Mapbox.framework/Headers\"";
-				INFOPLIST_FILE = "Mapbox Example/Mapbox Example-Info.plist";
+				INFOPLIST_FILE = "Mapbox Example/StrlApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,7 +626,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "MB Example";
+				PRODUCT_NAME = StrlLondon;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -614,9 +642,9 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mapbox Example/Mapbox Example-Prefix.pch";
+				GCC_PREFIX_HEADER = "Mapbox Example/StrlApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Mapbox.framework/Headers\"";
-				INFOPLIST_FILE = "Mapbox Example/Mapbox Example-Info.plist";
+				INFOPLIST_FILE = "Mapbox Example/StrlApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,7 +656,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "MB Example";
+				PRODUCT_NAME = StrlLondon;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -637,7 +665,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DDEF3A231522813600DE6DB0 /* Build configuration list for PBXProject "Mapbox Example" */ = {
+		DDEF3A231522813600DE6DB0 /* Build configuration list for PBXProject "StrlApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDEF3A451522813600DE6DB0 /* Debug */,
@@ -647,7 +675,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDEF3A471522813600DE6DB0 /* Build configuration list for PBXNativeTarget "Mapbox Example" */ = {
+		DDEF3A471522813600DE6DB0 /* Build configuration list for PBXNativeTarget "StrlApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDEF3A481522813600DE6DB0 /* Debug */,
