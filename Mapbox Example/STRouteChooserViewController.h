@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class STRouteChooserViewController;
+@protocol STRouteChooserDelegate <NSObject>
+- (void) routeSelected: (STRouteChooserViewController *) sender withName:(NSString *) name;
+@end
 @interface STRouteChooserViewController : UIViewController
+
+@property (nonatomic, weak) id <STRouteChooserDelegate> delegate;
 
 @end

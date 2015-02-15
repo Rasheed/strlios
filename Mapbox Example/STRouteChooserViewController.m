@@ -3,7 +3,7 @@
 //  Mapbox Example
 //
 //  Created by Rasheed Wihaib on 09/02/2015.
-//  Copyright (c) 2015 Mapbox / Development Seed. All rights reserved.
+//  Copyright (c) 2015 Strl. All rights reserved.
 //
 
 #import "STRouteChooserViewController.h"
@@ -32,8 +32,7 @@
 }
 
 -(void) routeSelectedName:(NSString *) name {
-    NSLog(@"%@", name);
-    
+    [self.delegate routeSelected:self withName:name];    
 }
 
 - (void)didReceiveMemoryWarning {

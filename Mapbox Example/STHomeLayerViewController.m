@@ -16,6 +16,8 @@
 @property (nonatomic, retain) NSMutableDictionary *routes;
 @property (nonatomic) bool *controlVisible;
 
+@property (nonatomic) CLLocationCoordinate2D endpoint;
+
 @property (nonatomic, strong) IBOutlet UIView *mapViewContainer;
 @property (weak, nonatomic) IBOutlet UIView *buttonContainer;
 @property (weak, nonatomic) IBOutlet UIView *labelContainer;
@@ -64,10 +66,12 @@
     [mapView removeAllAnnotations];
     
     CLLocationCoordinate2D tappedPoint = CLLocationCoordinate2DMake([mapView pixelToCoordinate:point].latitude, [mapView pixelToCoordinate:point].longitude);
+    self.endpoint = tappedPoint;
     NSLog(@"You tapped at %f, %f", tappedPoint.latitude, tappedPoint.longitude);
-    //CLLocation *location = [self.locationManager location];
-    
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:51.5248 longitude:-0.1336];
+    CLLocation *location = [self.locationManager location];
+    if(location == nil) {
+        location = [[CLLocation alloc] initWithLatitude:51.5248 longitude:-0.1336];
+    }
     NSLog(@"Your current location is %f, %f", location.coordinate.latitude, location.coordinate.longitude);
 
     
@@ -229,9 +233,31 @@
 }
 
 - (IBAction)startWalk:(id)sender {
+    
     STRouteChooserViewController *controller=[[STRouteChooserViewController alloc] initWithNibName:@"STRouteChooserViewController" bundle:nil];
+    controller.delegate = self;
     [self presentPopupViewController:controller animationType:MJPopupViewAnimationFade];
+}
 
+-(void)routeSelected:(STRouteChooserViewController *)sender withName:(NSString *)name {
+    
+    NSLog(@"%@", name);
+    [self.controlContainer setHidden:YES];
+    [self.startWalkButton setHidden:YES];
+    [self startSelectedRoute:name];
+    [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
+}
+
+-(void)startSelectedRoute:(NSString *) name {
+    [self.mapView removeAllAnnotations];
+    NSString *pathName = [NSString stringWithFormat:@"%@routepoints",name];
+    RMPointAnnotation *pointForDestination = [[RMPointAnnotation alloc] initWithMapView:self.mapView
+                                                                             coordinate:self.endpoint
+                                                                               andTitle:@"Destination"];
+    
+    [self.mapView addAnnotation:pointForDestination];
+
+    [self toggleLayerNamed:pathName];
 }
 
 @end
