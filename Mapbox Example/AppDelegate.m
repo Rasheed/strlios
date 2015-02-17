@@ -21,12 +21,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    [[RMConfiguration configuration] setAccessToken:@"pk.eyJ1IjoicmFzaGVlZHdpaGFpYiIsImEiOiJaOTBoMFI4In0.5rmY9BbciXR2L_8JC_CaVA"];
+    [[RMConfiguration configuration] setAccessToken:@"pk.eyJ1IjoicmFzaHN0YWNrcyIsImEiOiJFaEhlSjg4In0.l5yROIJgxa6rL3h8pSyK_g"];
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
-    [tabBarController.tabBar setBarTintColor:[self colorFromHexString:@"#299187"] ];
-    [tabBarController.tabBar setBackgroundColor: [self colorFromHexString:@"#299187"]];
+    [tabBarController.tabBar setBarTintColor:[self colorFromHexString:@"#FF8A8A"] ];
+    [tabBarController.tabBar setBackgroundColor: [self colorFromHexString:@"#FF8A8A"]];
     [tabBarController.tabBar setTintColor:[UIColor whiteColor]];
     
     NSMutableArray *viewControllers = [NSMutableArray array];
