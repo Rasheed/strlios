@@ -14,6 +14,11 @@
 		1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */; };
 		1E77D5EE1A90F96F00C90917 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */; };
 		1E77D5EF1A90F96F00C90917 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5ED1A90F96F00C90917 /* UIViewController+MJPopupViewController.m */; };
+		1EE252451A98BB6300E171F8 /* numbered_list-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE252441A98BB6300E171F8 /* numbered_list-32.png */; };
+		1EE252471A98BBF300E171F8 /* numbered_list-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE252461A98BBF300E171F8 /* numbered_list-50.png */; };
+		1EE252491A98BC1800E171F8 /* walking-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE252481A98BC1800E171F8 /* walking-32.png */; };
+		1EE2524D1A98BCBA00E171F8 /* down4-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE2524C1A98BCBA00E171F8 /* down4-32.png */; };
+		1EE2524F1A98BD3700E171F8 /* central_heating-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE2524E1A98BD3700E171F8 /* central_heating-32.png */; };
 		DD3A27EE1582A0AB00DADEFF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */; };
 		DD76D72E152E47660065DBB2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC4BF10152E455500089409 /* libz.dylib */; };
 		DDA6DFBF16A6364F00D373D8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6DFBD16A6364F00D373D8 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -53,6 +58,11 @@
 		1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
 		1E77D5EC1A90F96F00C90917 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		1E77D5ED1A90F96F00C90917 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		1EE252441A98BB6300E171F8 /* numbered_list-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "numbered_list-32.png"; sourceTree = "<group>"; };
+		1EE252461A98BBF300E171F8 /* numbered_list-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "numbered_list-50.png"; sourceTree = "<group>"; };
+		1EE252481A98BC1800E171F8 /* walking-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "walking-32.png"; sourceTree = "<group>"; };
+		1EE2524C1A98BCBA00E171F8 /* down4-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down4-32.png"; sourceTree = "<group>"; };
+		1EE2524E1A98BD3700E171F8 /* central_heating-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "central_heating-32.png"; sourceTree = "<group>"; };
 		DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DDA6DFBD16A6364F00D373D8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		DDA6DFBE16A6364F00D373D8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -282,6 +292,11 @@
 		DDC4BEC3152E356F00089409 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1EE2524C1A98BCBA00E171F8 /* down4-32.png */,
+				1EE2524E1A98BD3700E171F8 /* central_heating-32.png */,
+				1EE252481A98BC1800E171F8 /* walking-32.png */,
+				1EE252461A98BBF300E171F8 /* numbered_list-50.png */,
+				1EE252441A98BB6300E171F8 /* numbered_list-32.png */,
 				DDC4BECB152E380900089409 /* control-room-0.2.0.mbtiles */,
 				DDC4BEBF152E351F00089409 /* online.png */,
 				DDC4BEC0152E351F00089409 /* online@2x.png */,
@@ -410,16 +425,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE252491A98BC1800E171F8 /* walking-32.png in Resources */,
 				1E0000171A89297F007B7F77 /* STRouteChooserViewController.xib in Resources */,
 				DDA8783919AE9899006AFD7A /* Mapbox.bundle in Resources */,
+				1EE252451A98BB6300E171F8 /* numbered_list-32.png in Resources */,
 				DDC930061A1599D20082BDE8 /* Images.xcassets in Resources */,
+				1EE252471A98BBF300E171F8 /* numbered_list-50.png in Resources */,
 				DDEF3A381522813600DE6DB0 /* InfoPlist.strings in Resources */,
 				DDC4BEC1152E351F00089409 /* online.png in Resources */,
 				DDC4BEC2152E351F00089409 /* online@2x.png in Resources */,
 				DDC4BEC9152E36FF00089409 /* offline.png in Resources */,
 				DDC4BECA152E36FF00089409 /* offline@2x.png in Resources */,
+				1EE2524F1A98BD3700E171F8 /* central_heating-32.png in Resources */,
 				DDC4BECC152E380900089409 /* control-room-0.2.0.mbtiles in Resources */,
 				DDC4BECF152E38D200089409 /* interactive.png in Resources */,
+				1EE2524D1A98BCBA00E171F8 /* down4-32.png in Resources */,
 				DDC930071A1599D20082BDE8 /* LaunchScreen.xib in Resources */,
 				1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */,
 				DDC4BED0152E38D200089409 /* interactive@2x.png in Resources */,

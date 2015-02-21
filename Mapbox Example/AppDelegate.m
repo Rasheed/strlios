@@ -29,24 +29,11 @@
     [tabBarController.tabBar setBackgroundColor: [self colorFromHexString:@"#FF8A8A"]];
     [tabBarController.tabBar setTintColor:[UIColor whiteColor]];
     
-    NSMutableArray *viewControllers = [NSMutableArray array];
-    
-    for (NSString *typeString in [NSArray arrayWithObjects:@"Home", nil])
-    {
-        Class ViewControllerClass = NSClassFromString([NSString stringWithFormat:@"STHomeLayerViewController"]);
+    Class ViewControllerClass = NSClassFromString([NSString stringWithFormat:@"STHomeLayerViewController"]);
         
-        UIViewController *viewController = [[ViewControllerClass alloc] initWithNibName:@"STHomeLayerViewController" bundle:nil];
-        
-        viewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:[NSString stringWithFormat:@"Home"]
-                                                                  image:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", typeString]] 
-                                                                    tag:0];
-        
-        [viewControllers addObject:viewController];
-    }
+    UIViewController *viewController = [[ViewControllerClass alloc] initWithNibName:@"STHomeLayerViewController" bundle:nil];
     
-    tabBarController.viewControllers = viewControllers;
-    
-    self.window.rootViewController = tabBarController;
+    self.window.rootViewController = viewController;
     
     [self.window makeKeyAndVisible];
     

@@ -1,8 +1,8 @@
 //
-//  OnlineLayerViewController.m
-//  Mapbox Example
+//  STHomeLayerViewController.m
+//  Strl
 //
-//  Copyright (c) 2014 Mapbox, Inc. All rights reserved.
+//  Copyright (c) 2015 Strl. All rights reserved.
 //
 
 #import "STHomeLayerViewController.h"
@@ -81,64 +81,74 @@
                                                                     coordinate:[mapView pixelToCoordinate:point]
                                                                       andTitle:@"Destination"];
     
-    [mapView addAnnotation:pointForDestination];
+    [self addPathsFromPoint:location.coordinate ToPoint:tappedPoint ToMap:mapView];
     
-    [self zoomMapView:mapView toFit:location.coordinate andPoint:tappedPoint];
+    [mapView addAnnotation:pointForDestination];
+    [self.controlContainer setHidden:NO];
+    [self.startWalkButton setHidden:NO];
+    [self.ratingView setHidden:YES];
 
-    NSString *urlString = [NSString stringWithFormat:@"https://prelimstrlapp.herokuapp.com/services/path/all/%f/%f/%f/%f", location.coordinate.latitude, location.coordinate.longitude, tappedPoint.latitude, tappedPoint.longitude];
+}
+
+- (void) addPathsFromPoint:(CLLocationCoordinate2D) from ToPoint:(CLLocationCoordinate2D)to ToMap:(RMMapView *) mapView {
+    [self zoomMapView:mapView toFit:from andPoint:to];
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://prelimstrlapp.herokuapp.com/services/path/all/%f/%f/%f/%f", from.latitude, from.longitude, to.latitude, to.longitude];
     
     NSLog(@"urlstring %@", urlString);
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-    
-    NSURLResponse *response;
-    NSError *error;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    if(!error)
-    {
-        NSError *e = nil;
-        NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error: &e];
-        for(id key in JSON) {
-            if ([key rangeOfString:@"Distance"].location != NSNotFound) {
-                NSString *value =[NSString stringWithFormat:@"%@",[JSON objectForKey: key]];
-                NSString *labelcontent = [NSString stringWithFormat:@"%ldm", (long)value.integerValue];
-                if([key isEqualToString:@"fastestRouteDistance"]) {
-                    [self.fastestLabel setText:labelcontent];
-                } else if([key isEqualToString:@"walkableRouteDistance"]) {
-                    [self.walkableLabel setText:labelcontent];
-                } else if([key isEqualToString:@"strlRouteDistance"]) {
-                    [self.strlLabel setText:labelcontent];
+    dispatch_queue_t myQueue = dispatch_queue_create("AddToMap",NULL);
+    dispatch_async(myQueue, ^{
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+        
+        NSURLResponse *response;
+        NSError *error;
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(!error)
+            {
+                NSError *e = nil;
+                NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+                NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error: &e];
+                for(id key in JSON) {
+                    if ([key rangeOfString:@"Distance"].location != NSNotFound) {
+                        NSString *value =[NSString stringWithFormat:@"%@",[JSON objectForKey: key]];
+                        NSString *labelcontent = [NSString stringWithFormat:@"%ldm", (long)value.integerValue];
+                        if([key isEqualToString:@"fastestRouteDistance"]) {
+                            [self.fastestLabel setText:labelcontent];
+                        } else if([key isEqualToString:@"walkableRouteDistance"]) {
+                            [self.walkableLabel setText:labelcontent];
+                        } else if([key isEqualToString:@"strlRouteDistance"]) {
+                            [self.strlLabel setText:labelcontent];
+                        }
+                        continue;
+                    }
+                    
+                    NSArray *value = [JSON objectForKey:key];
+                    self.points = [value mutableCopy];
+                    
+                    for (NSUInteger i = 0; i < [self.points count]; i++)
+                        [self.points replaceObjectAtIndex:i
+                                               withObject:[[CLLocation alloc] initWithLatitude:[[[self.points objectAtIndex:i] objectAtIndex:1] doubleValue]
+                                                                                     longitude:[[[self.points objectAtIndex:i] objectAtIndex:0] doubleValue]]];
+                    
+                    RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
+                                                                          coordinate:to
+                                                                            andTitle:key
+                                                ];
+                    
+                    [self.routes setValue:self.points forKey:key];
+                    
+                    
+                    [mapView addAnnotation:annotation];
+                    
+                    [annotation setBoundingBoxFromLocations:self.points];
+                    
                 }
-                continue;
             }
             
-            NSArray *value = [JSON objectForKey:key];
-            self.points = [value mutableCopy];
-            
-            for (NSUInteger i = 0; i < [self.points count]; i++)
-                [self.points replaceObjectAtIndex:i
-                                       withObject:[[CLLocation alloc] initWithLatitude:[[[self.points objectAtIndex:i] objectAtIndex:1] doubleValue]
-                                                                             longitude:[[[self.points objectAtIndex:i] objectAtIndex:0] doubleValue]]];
-            
-            RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
-                                                                  coordinate:location.coordinate
-                                                                    andTitle:key
-                                        ];
-            
-            [self.routes setValue:self.points forKey:key];
-
-            
-            [mapView addAnnotation:annotation];
-            
-            [annotation setBoundingBoxFromLocations:self.points];
-            
-        }
-        [self.controlContainer setHidden:NO];
-        [self.startWalkButton setHidden:NO];
-
-    }
+        });
+    }); 
 
 }
 
@@ -259,8 +269,6 @@
     [self.mapView addAnnotation:pointForDestination];
     [self toggleLayerNamed:pathName];
     [self.ratingView setHidden:NO];
-
-    
 }
 
 @end
