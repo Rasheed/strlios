@@ -201,6 +201,9 @@
                                 <navigationItem title="Strl" id="lLO-qA-muC">
                                     <barButtonItem key="rightBarButtonItem" image="central_heating-32.png" style="plain" id="duJ-2j-KAO">
                                         <color key="tintColor" red="0.98039215690000003" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="showRoutesPage:" destination="-1" id="NIe-Oa-YhL"/>
+                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>

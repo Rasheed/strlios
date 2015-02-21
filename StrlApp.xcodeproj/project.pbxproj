@@ -12,6 +12,8 @@
 		1E0000171A89297F007B7F77 /* STRouteChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E0000151A89297F007B7F77 /* STRouteChooserViewController.xib */; };
 		1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */; };
 		1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */; };
+		1E7094B01A992D80004A36D2 /* STMyRoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7094AE1A992D80004A36D2 /* STMyRoutesViewController.m */; };
+		1E7094B11A992D80004A36D2 /* STMyRoutesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094AF1A992D80004A36D2 /* STMyRoutesViewController.xib */; };
 		1E77D5EE1A90F96F00C90917 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */; };
 		1E77D5EF1A90F96F00C90917 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5ED1A90F96F00C90917 /* UIViewController+MJPopupViewController.m */; };
 		1EE252451A98BB6300E171F8 /* numbered_list-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE252441A98BB6300E171F8 /* numbered_list-32.png */; };
@@ -54,6 +56,9 @@
 		1E1BD9C51A8119A300806C95 /* STHomeLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHomeLayerViewController.m; sourceTree = "<group>"; };
 		1E1BD9C61A8119A300806C95 /* STHomeLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeLayerViewController.h; sourceTree = "<group>"; };
 		1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STHomeLayerViewController.xib; sourceTree = "<group>"; };
+		1E7094AD1A992D80004A36D2 /* STMyRoutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMyRoutesViewController.h; sourceTree = "<group>"; };
+		1E7094AE1A992D80004A36D2 /* STMyRoutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMyRoutesViewController.m; sourceTree = "<group>"; };
+		1E7094AF1A992D80004A36D2 /* STMyRoutesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STMyRoutesViewController.xib; sourceTree = "<group>"; };
 		1E77D5EA1A90F96F00C90917 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
 		1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
 		1E77D5EC1A90F96F00C90917 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
@@ -182,6 +187,16 @@
 				1E00000F1A89229E007B7F77 /* KLCPopup.m */,
 			);
 			name = ThirdPartyViews;
+			sourceTree = "<group>";
+		};
+		1E7094AC1A992D4A004A36D2 /* MyRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				1E7094AD1A992D80004A36D2 /* STMyRoutesViewController.h */,
+				1E7094AE1A992D80004A36D2 /* STMyRoutesViewController.m */,
+				1E7094AF1A992D80004A36D2 /* STMyRoutesViewController.xib */,
+			);
+			name = MyRoutes;
 			sourceTree = "<group>";
 		};
 		1E77D5AB1A90063A00C90917 /* RouteChooser */ = {
@@ -346,6 +361,7 @@
 		DDEF3A331522813600DE6DB0 /* Mapbox Example */ = {
 			isa = PBXGroup;
 			children = (
+				1E7094AC1A992D4A004A36D2 /* MyRoutes */,
 				1E77D5AC1A90065E00C90917 /* HomeLayer */,
 				1E77D5AB1A90063A00C90917 /* RouteChooser */,
 				1E00000D1A89227B007B7F77 /* ThirdPartyViews */,
@@ -442,6 +458,7 @@
 				1EE2524D1A98BCBA00E171F8 /* down4-32.png in Resources */,
 				DDC930071A1599D20082BDE8 /* LaunchScreen.xib in Resources */,
 				1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */,
+				1E7094B11A992D80004A36D2 /* STMyRoutesViewController.xib in Resources */,
 				DDC4BED0152E38D200089409 /* interactive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +495,7 @@
 				1E77D5EE1A90F96F00C90917 /* MJPopupBackgroundView.m in Sources */,
 				1E1BD9C71A8119A300806C95 /* STHomeLayerViewController.m in Sources */,
 				1E0000101A89229E007B7F77 /* KLCPopup.m in Sources */,
+				1E7094B01A992D80004A36D2 /* STMyRoutesViewController.m in Sources */,
 				DDA6DFBF16A6364F00D373D8 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

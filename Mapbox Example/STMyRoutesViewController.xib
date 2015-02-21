@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STMyRoutesViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kN-bU-1nM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" barStyle="black" backIndicatorImage="online.png" translatesAutoresizingMaskIntoConstraints="NO" id="jGW-Kk-TGH">
+                            <rect key="frame" x="0.0" y="16" width="320" height="44"/>
+                            <color key="barTintColor" red="0.57647058819999997" green="0.79215686269999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="26"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textShadowColor" red="0.98039215690000003" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title="My Paths" id="Wuh-gt-AVq">
+                                    <barButtonItem key="backBarButtonItem" title="Back" id="yJo-cd-bF1"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.57647058819999997" green="0.79215686269999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="jGW-Kk-TGH" firstAttribute="leading" secondItem="5kN-bU-1nM" secondAttribute="leading" id="0ur-0h-HCQ"/>
+                        <constraint firstAttribute="bottom" secondItem="jGW-Kk-TGH" secondAttribute="bottom" id="7Z9-Pw-dhl"/>
+                        <constraint firstAttribute="height" constant="60" id="HdJ-MY-ZLx"/>
+                        <constraint firstAttribute="trailing" secondItem="jGW-Kk-TGH" secondAttribute="trailing" id="uda-t1-irA"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cJ7-dP-hJF">
+                    <rect key="frame" x="0.0" y="62" width="320" height="505"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cJ7-dP-hJF" firstAttribute="top" secondItem="5kN-bU-1nM" secondAttribute="bottom" constant="2" id="6g7-Or-hOl"/>
+                <constraint firstAttribute="trailing" secondItem="5kN-bU-1nM" secondAttribute="trailing" id="Bh6-WP-rJ0"/>
+                <constraint firstAttribute="bottom" secondItem="cJ7-dP-hJF" secondAttribute="bottom" constant="1" id="Dbu-8o-mM1"/>
+                <constraint firstItem="cJ7-dP-hJF" firstAttribute="trailing" secondItem="5kN-bU-1nM" secondAttribute="trailing" id="EFe-yb-6Kz"/>
+                <constraint firstItem="5kN-bU-1nM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PcE-Pn-NIO"/>
+                <constraint firstItem="cJ7-dP-hJF" firstAttribute="leading" secondItem="5kN-bU-1nM" secondAttribute="leading" id="Woy-x7-okh"/>
+                <constraint firstItem="5kN-bU-1nM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jzr-KV-EW2"/>
+                <constraint firstAttribute="centerX" secondItem="5kN-bU-1nM" secondAttribute="centerX" id="lSJ-9N-tQW"/>
+            </constraints>
+            <point key="canvasLocation" x="376" y="329"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="online.png" width="28" height="17"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

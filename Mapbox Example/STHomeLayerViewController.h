@@ -10,6 +10,7 @@
 #import "Mapbox.h"
 #import "KLCPopup.h"
 #import "STRouteChooserViewController.h"
+#import "STMyRoutesViewController.h"
 
 @interface STHomeLayerViewController : UIViewController<CLLocationManagerDelegate, RMMapViewDelegate,STRouteChooserDelegate>
 
