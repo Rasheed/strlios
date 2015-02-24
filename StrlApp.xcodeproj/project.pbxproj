@@ -14,6 +14,10 @@
 		1E1BD9CD1A81303600806C95 /* STHomeLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BD9CC1A81303600806C95 /* STHomeLayerViewController.xib */; };
 		1E7094B01A992D80004A36D2 /* STMyRoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7094AE1A992D80004A36D2 /* STMyRoutesViewController.m */; };
 		1E7094B11A992D80004A36D2 /* STMyRoutesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094AF1A992D80004A36D2 /* STMyRoutesViewController.xib */; };
+		1E7094B51A9C8B72004A36D2 /* strllogowhiteish.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094B41A9C8B72004A36D2 /* strllogowhiteish.png */; };
+		1E7094B71A9C90A7004A36D2 /* strllogowithtext.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094B61A9C90A7004A36D2 /* strllogowithtext.png */; };
+		1E7094BB1A9C9928004A36D2 /* down_right-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094BA1A9C9928004A36D2 /* down_right-50.png */; };
+		1E7094C11A9C9D0C004A36D2 /* myroutes.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094C01A9C9D0C004A36D2 /* myroutes.png */; };
 		1E77D5EE1A90F96F00C90917 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */; };
 		1E77D5EF1A90F96F00C90917 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5ED1A90F96F00C90917 /* UIViewController+MJPopupViewController.m */; };
 		1EE252451A98BB6300E171F8 /* numbered_list-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE252441A98BB6300E171F8 /* numbered_list-32.png */; };
@@ -59,6 +63,10 @@
 		1E7094AD1A992D80004A36D2 /* STMyRoutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMyRoutesViewController.h; sourceTree = "<group>"; };
 		1E7094AE1A992D80004A36D2 /* STMyRoutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMyRoutesViewController.m; sourceTree = "<group>"; };
 		1E7094AF1A992D80004A36D2 /* STMyRoutesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STMyRoutesViewController.xib; sourceTree = "<group>"; };
+		1E7094B41A9C8B72004A36D2 /* strllogowhiteish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strllogowhiteish.png; sourceTree = "<group>"; };
+		1E7094B61A9C90A7004A36D2 /* strllogowithtext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strllogowithtext.png; sourceTree = "<group>"; };
+		1E7094BA1A9C9928004A36D2 /* down_right-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down_right-50.png"; sourceTree = "<group>"; };
+		1E7094C01A9C9D0C004A36D2 /* myroutes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myroutes.png; sourceTree = "<group>"; };
 		1E77D5EA1A90F96F00C90917 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
 		1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
 		1E77D5EC1A90F96F00C90917 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
@@ -307,6 +315,10 @@
 		DDC4BEC3152E356F00089409 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E7094C01A9C9D0C004A36D2 /* myroutes.png */,
+				1E7094BA1A9C9928004A36D2 /* down_right-50.png */,
+				1E7094B61A9C90A7004A36D2 /* strllogowithtext.png */,
+				1E7094B41A9C8B72004A36D2 /* strllogowhiteish.png */,
 				1EE2524C1A98BCBA00E171F8 /* down4-32.png */,
 				1EE2524E1A98BD3700E171F8 /* central_heating-32.png */,
 				1EE252481A98BC1800E171F8 /* walking-32.png */,
@@ -442,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EE252491A98BC1800E171F8 /* walking-32.png in Resources */,
+				1E7094B71A9C90A7004A36D2 /* strllogowithtext.png in Resources */,
 				1E0000171A89297F007B7F77 /* STRouteChooserViewController.xib in Resources */,
 				DDA8783919AE9899006AFD7A /* Mapbox.bundle in Resources */,
 				1EE252451A98BB6300E171F8 /* numbered_list-32.png in Resources */,
@@ -451,9 +464,12 @@
 				DDC4BEC1152E351F00089409 /* online.png in Resources */,
 				DDC4BEC2152E351F00089409 /* online@2x.png in Resources */,
 				DDC4BEC9152E36FF00089409 /* offline.png in Resources */,
+				1E7094B51A9C8B72004A36D2 /* strllogowhiteish.png in Resources */,
 				DDC4BECA152E36FF00089409 /* offline@2x.png in Resources */,
+				1E7094BB1A9C9928004A36D2 /* down_right-50.png in Resources */,
 				1EE2524F1A98BD3700E171F8 /* central_heating-32.png in Resources */,
 				DDC4BECC152E380900089409 /* control-room-0.2.0.mbtiles in Resources */,
+				1E7094C11A9C9D0C004A36D2 /* myroutes.png in Resources */,
 				DDC4BECF152E38D200089409 /* interactive.png in Resources */,
 				1EE2524D1A98BCBA00E171F8 /* down4-32.png in Resources */,
 				DDC930071A1599D20082BDE8 /* LaunchScreen.xib in Resources */,

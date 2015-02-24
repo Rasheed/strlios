@@ -19,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     [[RMConfiguration configuration] setAccessToken:@"pk.eyJ1IjoicmFzaHN0YWNrcyIsImEiOiJFaEhlSjg4In0.l5yROIJgxa6rL3h8pSyK_g"];

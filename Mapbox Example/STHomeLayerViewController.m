@@ -30,7 +30,7 @@
 
 @end
 
-#define kMapboxMapID @"rashstacks.l7pe2n95"
+#define kMapboxMapID @"rashstacks.la4h44da"
 
 @implementation STHomeLayerViewController
 
@@ -261,8 +261,6 @@
 - (IBAction)showRoutesPage:(id)sender {
     STMyRoutesViewController *controller=[[STMyRoutesViewController alloc] initWithNibName:@"STMyRoutesViewController" bundle:nil];
     [self presentViewController:controller animated:YES completion:nil];
-
-    
 }
 
 -(void)startSelectedRoute:(NSString *) name {
