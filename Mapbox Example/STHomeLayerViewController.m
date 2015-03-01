@@ -79,9 +79,9 @@
     
     RMPointAnnotation *pointForDestination = [[RMPointAnnotation alloc] initWithMapView:mapView
                                                                     coordinate:[mapView pixelToCoordinate:point]
-                                                                      andTitle:@"Destination"];
+                                                                      andTitle:@"destination"];
     
-    [self addPathsFromPoint:location.coordinate ToPoint:tappedPoint ToMap:mapView];
+    //[self addPathsFromPoint:location.coordinate ToPoint:tappedPoint ToMap:mapView];
     
     [mapView addAnnotation:pointForDestination];
     [self.controlContainer setHidden:NO];
@@ -173,6 +173,12 @@
 {
     if (annotation.isUserLocationAnnotation)
         return nil;
+    
+    if([[annotation title] isEqualToString:@"Destination"]) {
+        RMMarker *marker;
+        marker =  [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"strlmarker.png"]];
+        return marker;
+    }
     
     RMShape *shape = [[RMShape alloc] initWithView:mapView];
     if ([[annotation title] isEqualToString:@"fastestroutepoints"]) {

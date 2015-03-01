@@ -18,6 +18,7 @@
 		1E7094B71A9C90A7004A36D2 /* strllogowithtext.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094B61A9C90A7004A36D2 /* strllogowithtext.png */; };
 		1E7094BB1A9C9928004A36D2 /* down_right-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094BA1A9C9928004A36D2 /* down_right-50.png */; };
 		1E7094C11A9C9D0C004A36D2 /* myroutes.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094C01A9C9D0C004A36D2 /* myroutes.png */; };
+		1E7094C31A9DED2B004A36D2 /* strlmarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7094C21A9DED2B004A36D2 /* strlmarker.png */; };
 		1E77D5EE1A90F96F00C90917 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */; };
 		1E77D5EF1A90F96F00C90917 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77D5ED1A90F96F00C90917 /* UIViewController+MJPopupViewController.m */; };
 		1EE252451A98BB6300E171F8 /* numbered_list-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE252441A98BB6300E171F8 /* numbered_list-32.png */; };
@@ -67,6 +68,7 @@
 		1E7094B61A9C90A7004A36D2 /* strllogowithtext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strllogowithtext.png; sourceTree = "<group>"; };
 		1E7094BA1A9C9928004A36D2 /* down_right-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down_right-50.png"; sourceTree = "<group>"; };
 		1E7094C01A9C9D0C004A36D2 /* myroutes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myroutes.png; sourceTree = "<group>"; };
+		1E7094C21A9DED2B004A36D2 /* strlmarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strlmarker.png; sourceTree = "<group>"; };
 		1E77D5EA1A90F96F00C90917 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
 		1E77D5EB1A90F96F00C90917 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
 		1E77D5EC1A90F96F00C90917 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 		DDC4BEC3152E356F00089409 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E7094C21A9DED2B004A36D2 /* strlmarker.png */,
 				1E7094C01A9C9D0C004A36D2 /* myroutes.png */,
 				1E7094BA1A9C9928004A36D2 /* down_right-50.png */,
 				1E7094B61A9C90A7004A36D2 /* strllogowithtext.png */,
@@ -461,6 +464,7 @@
 				DDC930061A1599D20082BDE8 /* Images.xcassets in Resources */,
 				1EE252471A98BBF300E171F8 /* numbered_list-50.png in Resources */,
 				DDEF3A381522813600DE6DB0 /* InfoPlist.strings in Resources */,
+				1E7094C31A9DED2B004A36D2 /* strlmarker.png in Resources */,
 				DDC4BEC1152E351F00089409 /* online.png in Resources */,
 				DDC4BEC2152E351F00089409 /* online@2x.png in Resources */,
 				DDC4BEC9152E36FF00089409 /* offline.png in Resources */,

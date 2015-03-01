@@ -1,9 +1,8 @@
-# Mapbox iOS Example
+# StrlApp for iOS 
 
-This is an example showing usage of the [Mapbox iOS SDK](https://github.com/mapbox/mapbox-ios-sdk) for: 
+This is the front-end client for the StrlApp routing service for recommending scenic walking detours in London. 
 
- 1. Online tile sources (e.g., [Mapbox Hosting](http://mapbox.com/plans/)) with `RMMapboxSource`
- 1. Offline tile sources ([MBTiles](http://mbtiles.org)) with `RMMBTilesSource`
- 1. Interactive tile sources of both types ([example](http://mapbox.com/demo/visiblemap/)) with `RMInteractiveSource`
+This application uses the [Mapbox iOS SDK](https://github.com/mapbox/mapbox-ios-sdk) with maps being hosted on [Mapbox Hosting](http://mapbox.com/plans/)).
+
 
 ![](screenshot.png)
